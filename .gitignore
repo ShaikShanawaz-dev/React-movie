@@ -1,3 +1,4 @@
+
 # Logs
 logs
 *.log
@@ -7,18 +8,67 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Dependencies
+node_modules/
+jspm_packages/
+.pnp.*
+
+# Production build
+dist/
+dist-ssr/
+build/
+.next/
+.nuxt/
+.output/
+
+# Environment variables
+.env
+.env.*
+!.env.example
 *.local
 
-# Editor directories and files
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Testing and coverage
+coverage/
+.nyc_output/
+*.lcov
+
+# Cache
+.cache/
+.parcel-cache/
+.vite/
+.turbo/
+
+# Editor directories
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Other
+*.tsbuildinfo
+.npm/
+.grunt/
+bower_components/
+web_modules/
+.svelte-kit/
+.astro/
+.docusaurus/
+.serverless/
+.firebase/
+.dynamodb/
+.tern-port
