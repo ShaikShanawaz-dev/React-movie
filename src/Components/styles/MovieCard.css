@@ -43,3 +43,17 @@
 .app.dark .movie-Card p{
   color:#ccc;
 }
+
+@media(max-width:480px){
+
+ .movie-Card{
+   width:150px;
+ }
+ .movie-Card img{
+  width: 150px;
+  height: 200px;
+  
+}
+
+
+}

@@ -12,6 +12,7 @@
   --shadow-light: 0 8px 25px rgba(0, 0, 0, 0.1);
   --shadow-dark: 0 8px 25px rgba(0, 0, 0, 0.5);
   --header-height: 80px;
+  
 }
 .app{
   min-height: 100vh;
@@ -56,13 +57,12 @@ body{
 
 
 /*Movie-list*/
-.movie-list{
-  display:grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 25px;
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-top:50px;
-  
+  gap: 24px;
+  padding: 20px;
 }
 
 /*Movie Card*/
@@ -75,8 +75,8 @@ body{
   text-align: center;
   box-shadow:var(--shadow-light);
  transition:transform var(--transition-speed) ease,
-    box-shadow var(--transition-speed) ease,
-    background var(--transition-speed)ease;
+ box-shadow var(--transition-speed) ease,
+ background var(--transition-speed)ease;
 }
 
 .app.dark .movie-Card{
@@ -110,4 +110,40 @@ body{
 }
 .app.dark .movie-Card p{
   color:#ccc;
+}
+@media (max-width: 480px) {
+
+  .movie-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 65px;
+  }
+
+  .movie-Card {
+    width: 150px;
+  }
+
+  .movie-Card img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  header {
+    height: fit-content;
+  }
+
+  header .header-controls input[type="text"] {
+    padding: 7px 9px;
+    border-radius: 8px;
+  }
+
+  header .header-controls select {
+    padding: 7px 9px;
+    border-radius: 5px;
+    width: 130px;
+  }
 }
