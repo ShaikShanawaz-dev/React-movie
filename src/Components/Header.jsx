@@ -1,4 +1,3 @@
-import React from "react";
 import './styles/Header.css';
 
 const Header = ({searchTerm,setSearchTerm,sortYear,setSortYear,darkMode,setDarkMode}) => {
@@ -19,7 +18,7 @@ const Header = ({searchTerm,setSearchTerm,sortYear,setSortYear,darkMode,setDarkM
             <option value="desc">Year Descending</option>
         </select>
         <label >
-          <input type="checkbox" checked={darkMode}onClick={()=>setDarkMode(!darkMode)}></input>
+          <input type="checkbox" checked={darkMode} onChange={(e) => setDarkMode(e.target.checked)} />
           DarkMode
         </label>
 

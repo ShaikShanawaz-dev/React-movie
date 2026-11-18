@@ -1,5 +1,4 @@
-import React from 'react';
-import './styles/movieModal.css';
+import './styles/MovieCard.css';
 
 const movieCard = ({ movie, openModal }) => {
   return (

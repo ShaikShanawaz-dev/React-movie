@@ -1,59 +1,54 @@
-.movie-Card{
-  width: 200px;
-  background-color: var(--color-card-light);
+.movie-Card {
+  width: 100%;
+  max-width: 220px;
+  justify-self: center;
+  overflow: hidden;
   border-radius: 16px;
- overflow: hidden;
-  cursor: pointer;
+  background-color: var(--color-card-light);
+  box-shadow: var(--shadow-light);
   text-align: center;
-  box-shadow:var(--shadow-light);
- transition:transform var(--transition-speed) ease,
+  cursor: pointer;
+  transition:
+    transform var(--transition-speed) ease,
     box-shadow var(--transition-speed) ease,
-    background var(--transition-speed)ease;
+    background-color var(--transition-speed) ease;
 }
 
-.app.dark .movie-Card{
+.app.dark .movie-Card {
   background-color: var(--color-card-dark);
-  box-shadow:var(--shadow-dark);
+  box-shadow: var(--shadow-dark);
 }
-.movie-Card img{
-  width: 200px;
-  height: 300px;
-  object-fit: cover;
-  border-bottom:3px solid var(--color-accent);
+
+.movie-Card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border-bottom: 3px solid var(--color-accent);
   border-radius: 12px 20px 0 0;
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
-.movie-Card:hover img{
+
+.movie-Card:hover img {
   transform: scale(1.05);
 }
 
-.movie-Card:hover{
-  transform:translateY(-8px);
-}
-.movie-Card h3{
-  margin:12px 0 5px;
-  font-size:1.15rem;
-  font-weight:600;
-}
-.movie-Card p{
-  margin:0 0 12px;
-  font-size:0.9rem;
-  color:#888;
-}
-.app.dark .movie-Card p{
-  color:#ccc;
+.movie-Card:hover {
+  transform: translateY(-5px);
 }
 
-@media(max-width:480px){
-
- .movie-Card{
-   width:150px;
- }
- .movie-Card img{
-  width: 150px;
-  height: 200px;
-  
+.movie-Card h3 {
+  margin: 12px 8px 5px;
+  font-size: 1.05rem;
+  font-weight: 600;
 }
 
+.movie-Card p {
+  margin: 0 0 12px;
+  color: #888;
+  font-size: 0.9rem;
+}
 
+.app.dark .movie-Card p {
+  color: #ccc;
 }
