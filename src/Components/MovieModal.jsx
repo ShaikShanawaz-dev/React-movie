@@ -14,12 +14,11 @@ const MovieModal = ({movie,onClose}) => {
                <button className="modal-action-btn">Watch Trailer</button>
                {/* console.log(movie); */}
             </div>
-            
 
         </div>
-      
+
     </div>
   );
 };
 
-export default MovieModal; 
+export default MovieModal;
