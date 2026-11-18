@@ -19,7 +19,7 @@ const Header = ({searchTerm,setSearchTerm,sortYear,setSortYear,darkMode,setDarkM
         </select>
         <label >
           <input type="checkbox" checked={darkMode} onChange={(e) => setDarkMode(e.target.checked)} />
-          DarkMode
+          Dark Mode
         </label>
 
     </div>
