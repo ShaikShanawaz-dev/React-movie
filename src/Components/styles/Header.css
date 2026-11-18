@@ -7,7 +7,9 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: var(--header-height);
+  min-height: var(--header-height);
+  height: auto;
+  flex-wrap: wrap;
   padding: 10px clamp(16px, 4vw, 48px);
   border-bottom: 2px solid rgb(92, 8, 8);
   background-color: var(--color-bg-light);
@@ -30,7 +32,10 @@ header .logo h1 {
 
 header .header-controls {
   display: flex;
+  flex: 1 1 auto;
   align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   gap: clamp(8px, 1.5vw, 16px);
   min-width: 0;
 }
